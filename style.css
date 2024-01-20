@@ -1,0 +1,261 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;   
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    background-color: crimson;
+}
+:root{
+    --main-color:#023a24;
+    --white:#ffff;
+    --border:0.1rem solid;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+    color: white;
+}
+
+.container {
+    padding-inline: 6rem;
+}
+
+.active {
+    background-color: #4ed59f;
+}
+
+nav {
+    padding-block: 2rem;
+    position: fixed;
+    left: 0;
+    right:0;
+    z-index: 9;
+
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    gap:2rem;
+}
+
+.menu ul a {
+    font-size: 1.5rem;
+}
+
+.menu .active a {
+    color: var(--main-color);
+}
+
+.menu .active {
+    position: relative;
+}
+
+.menu li {
+    position: relative;
+}
+
+
+.menu li:hover::before {
+    opacity: 1;
+}
+
+
+.menu li:hover a {
+    color:var(--main-color);
+}
+.menu li::before {
+    content: " ";
+    width: .5rem;
+    height: .5rem;
+    border-radius:50%;
+    background: var(--main-color);
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: .4 linear;
+
+}
+
+.menu .active::before {
+    content: " ";
+    width: .5rem;
+    height: .5rem;
+    border-radius:50%;
+    background: var(--main-color);
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+
+}
+
+.navbtn button {
+    width: fit-content;
+    background: #4ed59f;
+    color: white;
+    padding: .6rem 1.2rem;
+    border:2px soild black;
+    border-radius: .5rem;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+.banner {
+    background: url(./images/home-bg.png);
+    min-height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    
+}
+
+/* .banner .container {
+
+    min-width: 30vh;
+    background:red;
+} */
+
+.banner .container .banner-header {
+    position: absolute;
+    top:30%;
+    /* background: red; */
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.banner .container .banner-header-title {
+    position: absolute;
+    top:30%;
+    /* background: red; */
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-header h2 {
+    font-size: 3rem;
+    color:white;
+}
+
+.title-header {
+    position: relative;
+    
+    width: fit-content;
+    margin: 0 2rem;
+    
+}
+
+.title-header h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    background-color: rgb(36, 219, 204);
+    
+   
+}
+.title-header h2 {
+    background:#17273f;
+    padding: .6rem .8rem;
+    color: var(--main-color);
+    
+}
+
+.title-header img {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+    /* width: 100%; */
+}
+
+.banner-header-description {
+    text-align: center;
+    color: white;
+    width: 60%;
+    font-size: 1.2rem;
+    margin: auto;
+    font-weight: 300;
+    opacity: 0.5;
+    line-height: 1.5;
+    margin-top: 170px;
+
+}
+
+.free-trail{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+    margin-top: 1.5rem;
+}
+
+
+.free-trail h6 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.free-trail .icon {
+    width: 3rem;
+    height: 3rem;
+    border: white;
+    border-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.free-trail .icon i {
+    font-size: 1.8rem;
+    color: var(--white);
+
+}
+
+.robootImage {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.shape1 , .shape2 {
+    position: absolute;
+
+}
+
+.shape1 {
+    top: 30%;
+}
+
+.shape2 {
+    bottom: 40%;
+    right: 10%;
+}
